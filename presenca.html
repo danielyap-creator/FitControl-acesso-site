@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presença - FitControl</title>
+  <link rel="stylesheet" href="./css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+      <h2>FitControl</h2>
+      <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+      </button>
+    </div>
+
+    <nav>
+      <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+      <a href="alunos.html"><i class='bx bxs-user'></i> Alunos</a>
+      <a href="planos.html"><i class='bx bxs-wallet'></i> Planos</a>
+      <a href="presenca.html" class="active-link"><i class='bx bxs-calendar'></i> Presença</a>
+      <a href="agenda.html"><i class='bx bxs-time'></i> Agenda</a>
+      <a href="relatorios.html"><i class='bx bxs-bar-chart-alt-2'></i> Relatórios</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu">
+          <i class='bx bx-menu'></i>
+        </button>
+        <h1>Controle de Presença</h1>
+      </div>
+
+      <div class="user">
+        <i class='bx bxs-user-circle'></i>
+        <span>Admin</span>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <i class='bx bxs-user-check'></i>
+        <div>
+          <h3>Presentes Hoje</h3>
+          <p>86</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-time-five'></i>
+        <div>
+          <h3>Pico de Entrada</h3>
+          <p>18h</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-calendar-check'></i>
+        <div>
+          <h3>Frequência Média</h3>
+          <p>82%</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-group'></i>
+        <div>
+          <h3>Alunos Ativos</h3>
+          <p>248</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Registro de Presença</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do Aluno</th>
+              <th>Data</th>
+              <th>Horário de Entrada</th>
+              <th>Presença</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Daniely Aparecida</td>
+              <td>19/03/2026</td>
+              <td>07:10</td>
+              <td class="active">Confirmada</td>
+            </tr>
+            <tr>
+              <td>Gustavo Nunes</td>
+              <td>19/03/2026</td>
+              <td>08:25</td>
+              <td class="active">Confirmada</td>
+            </tr>
+            <tr>
+              <td>Isabella Neira</td>
+              <td>19/03/2026</td>
+              <td>18:05</td>
+              <td class="active">Confirmada</td>
+            </tr>
+            <tr>
+              <td>Francisco Ramon</td>
+              <td>19/03/2026</td>
+              <td>19:12</td>
+              <td class="active">Confirmada</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="./js/presenca.js"></script>
+</body>
+</html>
