@@ -33,7 +33,8 @@ if (signupForm) {
       nome,
       usuario,
       email,
-      senha
+      senha,
+      tipo: "aluno"
     };
 
     usuarios.push(novoUsuario);

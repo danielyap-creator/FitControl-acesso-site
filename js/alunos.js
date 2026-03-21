@@ -58,6 +58,23 @@ if (formAluno) {
     alunos.push(novoAluno);
     localStorage.setItem("alunos", JSON.stringify(alunos));
 
+    let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+
+    const usuarioJaExiste = usuarios.find(user => user.email === email);
+
+    if (!usuarioJaExiste) {
+      const novoUsuario = {
+        nome,
+        usuario: email,
+        email,
+        senha: "123456",
+        tipo: "aluno"
+      };
+
+      usuarios.push(novoUsuario);
+      localStorage.setItem("usuarios", JSON.stringify(usuarios));
+    }
+
     alert("Aluno cadastrado com sucesso!");
     formAluno.reset();
     carregarAlunos();

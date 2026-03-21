@@ -13,6 +13,14 @@ form.addEventListener("submit", function(event) {
         return;
     }
 
+    if (usuario === "admin" && senha === "1234") {
+        localStorage.setItem("usuarioLogado", "Administrador");
+        localStorage.setItem("tipoUsuario", "admin");
+        alert("Login de administrador realizado com sucesso!");
+        window.location.href = "dashboard.html";
+        return;
+    }
+
     const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
     const usuarioEncontrado = usuarios.find(
@@ -21,8 +29,15 @@ form.addEventListener("submit", function(event) {
 
     if (usuarioEncontrado) {
         localStorage.setItem("usuarioLogado", usuarioEncontrado.nome);
+        localStorage.setItem("tipoUsuario", usuarioEncontrado.tipo || "aluno");
+
         alert("Login realizado com sucesso!");
-        window.location.href = "dashboard.html";
+
+        if (usuarioEncontrado.tipo === "admin") {
+            window.location.href = "dashboard.html";
+        } else {
+            window.location.href = "aluno-dashboard.html";
+        }
     } else {
         alert("Usuário ou senha inválidos.");
     }
