@@ -15,3 +15,12 @@ Tecnologias utilizadas:
 - CSS
 - JavaScript
 - Chart.js
+- 
+Novas funcionalidades
+
+- Área exclusiva do aluno
+- Controle de presença integrado (admin → aluno)
+- Sistema de autenticação com perfis (admin e aluno)
+- Integração com VLibras para acessibilidade
+- Dashboard com dados dinâmicos
+- Cadastro e gerenciamento de alunos
